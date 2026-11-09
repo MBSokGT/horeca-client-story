@@ -1,0 +1,114 @@
+.vn-teaser{position:relative;min-height:380px;margin:30px 0 20px;background:#191512;color:#fff;overflow:hidden;display:flex;align-items:end}
+.vn-teaser-art{position:absolute;inset:0;background:url('assets/novel-bar.webp') center/cover no-repeat;opacity:.76;transition:transform .7s}
+.vn-teaser:hover .vn-teaser-art{transform:scale(1.04)}
+.vn-teaser:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#181410f5,#181410b9 49%,transparent)}
+.vn-teaser-copy{position:relative;z-index:2;max-width:540px;padding:34px 40px}
+.vn-teaser-copy h3{font:800 clamp(26px,3vw,39px)/1.12 var(--serif);margin:8px 0 14px;color:#fff}
+.vn-teaser-copy p{color:#f3e9e0;font-size:16px;line-height:1.55}
+.vn-teaser-copy .btn{margin-top:12px}
+body.vn-open{overflow:hidden}
+.vn-overlay,.vn-overlay *{box-sizing:border-box}
+.vn-overlay{position:fixed;inset:0;z-index:1000;background:#181411;color:#fff;font-family:var(--sans);line-height:1.4}
+.vn-overlay[hidden],.vn-actor[hidden],.vn-lightbox[hidden],.vn-feedback[hidden],.vn-continue[hidden]{display:none!important}
+.vn-overlay button{cursor:pointer;font:inherit}
+.vn-topbar{height:56px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(14px,2.4vw,42px);background:#211a17;border-bottom:1px solid #ffffff26;position:relative;z-index:5}
+.vn-brand{font-size:12px;font-weight:850;letter-spacing:.1em;white-space:nowrap}.vn-brand span{font-weight:500;color:#c9bbb0;letter-spacing:0}
+.vn-top-progress{display:flex;gap:16px;align-items:center;color:#d5c9bc;font-size:12px;letter-spacing:.1em}
+.vn-stars{display:flex;gap:1px}.vn-stars i{font-style:normal;font-size:22px;line-height:1;color:#776c64;transition:color .25s,transform .25s}.vn-stars i.earned{color:#f2c56a;transform:scale(1.15)}
+.vn-close{border:0;background:transparent;color:#fff;font-size:29px!important;line-height:1;padding:2px 8px}
+.vn-stage{height:calc(100vh - 56px);height:calc(100svh - 56px);position:relative;overflow:hidden;isolation:isolate;background:#46382f}
+.vn-stage-bg{position:absolute;inset:0;background-position:center;background-size:cover;animation:vn-scene-in .65s ease both}
+.scene-bar .vn-stage-bg{background-image:url('assets/novel-bar.webp')}
+.scene-bar-friday .vn-stage-bg{background-image:url('assets/novel-bar-friday.webp')}
+.scene-office .vn-stage-bg{background-image:url('assets/novel-office.webp')}
+.scene-warehouse .vn-stage-bg{background-image:url('assets/novel-warehouse.webp')}
+.scene-bar-friday .vn-stage-shade{background:linear-gradient(0deg,#17120eb0 0%,transparent 64%),linear-gradient(90deg,#1b171277,transparent 42%,#1b171255)}
+.vn-stage-shade{position:absolute;inset:0;background:linear-gradient(0deg,#17120ed9 0%,transparent 67%),linear-gradient(90deg,#1b171284,transparent 42%,#1b171269)}
+@keyframes vn-scene-in{from{opacity:.45;transform:scale(1.045)}to{opacity:1;transform:scale(1)}}
+.vn-scene-caption{position:absolute;z-index:2;top:26px;left:clamp(20px,4vw,70px);display:flex;flex-direction:column;gap:3px;color:#fff;text-shadow:0 2px 12px #0009}
+.vn-scene-caption span:first-child{font:800 clamp(22px,2.1vw,33px)/1.1 var(--serif)}
+.vn-scene-caption span:last-child{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#e5d6c8}
+.vn-actor{position:absolute;z-index:2;bottom:18%;height:min(77vh,870px);width:min(34vw,410px);background-size:contain;background-repeat:no-repeat;background-position:bottom;filter:drop-shadow(10px 14px 16px #0008);pointer-events:none}
+.vn-actor-kon{left:16%;background-image:url('assets/novel-konstantin-full.webp')}.vn-actor-manager{left:16%;background-image:url('assets/novel-manager-full.webp')}
+.kind-final .vn-actor-kon{left:3%;height:min(66vh,700px)}.kind-final .vn-actor-manager{left:22%;height:min(66vh,700px)}
+@keyframes vn-actor-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.vn-dialogue{position:absolute;z-index:4;left:clamp(18px,4vw,70px);right:clamp(18px,4vw,70px);bottom:clamp(16px,3vh,32px);max-height:45%;overflow-y:auto;background:#f8f5ef;box-shadow:0 18px 60px #0008;color:#281d19;padding:20px clamp(20px,2.6vw,38px) 21px;border-top:5px solid #bd2026}
+.kind-choice .vn-dialogue{max-height:59%}
+.vn-dialogue-head{display:flex;justify-content:space-between;gap:15px;align-items:center;color:#ad2026;text-transform:uppercase;letter-spacing:.12em;font-weight:850;font-size:12px}
+.vn-dialogue-head span:last-child{color:#8b8179;font-size:10px}
+.vn-dialogue>p{font:700 clamp(19px,2.1vw,30px)/1.32 var(--serif);max-width:1100px;margin:10px 0 16px}
+.vn-controls-row{display:flex;align-items:end;justify-content:space-between;gap:18px}
+.vn-continue{margin-left:auto;background:#bd2026;border:0;color:white;min-width:140px;padding:13px 19px;font-weight:800!important;white-space:nowrap}
+.vn-continue:hover,.vn-continue:focus-visible{background:#951a20}.vn-continue:disabled{background:#bdb4a9;color:#4d4740;cursor:default}
+.vn-choices{display:grid;gap:7px;width:100%}
+.vn-choices:empty{display:none}
+.vn-choices button{border:1px solid #c7bfb5;background:white;color:#2b2420;text-align:left;padding:9px 13px;font-size:13px;line-height:1.35}
+.vn-choices button:hover,.vn-choices button:focus-visible{border-color:#bd2026;box-shadow:inset 4px 0 #bd2026}
+.vn-feedback{background:#efe5d9;border-left:3px solid #bd2026;padding:10px 13px;font-size:13px;line-height:1.45;margin:0 0 14px}
+.vn-feedback strong{display:block;margin-bottom:3px}.vn-feedback p{margin:0}
+.vn-prop{position:absolute;z-index:3;right:clamp(4%,12vw,17%);top:10%;width:min(36vw,500px);height:65%;display:flex;align-items:center;justify-content:center}
+.vn-prop:empty{display:none}
+.vn-phone{position:relative;width:min(320px,100%);height:min(530px,100%);border:9px solid #222222;background:#f7f7f8;color:#211e1e;border-radius:40px;box-shadow:0 20px 55px #000b;overflow:hidden;padding:33px 14px 22px;transform:rotate(3deg)}
+@keyframes vn-prop-in{from{opacity:0;transform:translateY(24px) rotate(6deg) scale(.96)}to{opacity:1;transform:translateY(0) rotate(3deg) scale(1)}}
+.vn-phone-notch{position:absolute;top:0;left:26%;right:26%;height:17px;border-radius:0 0 13px 13px;background:#222}
+.vn-phone-header{display:flex;align-items:center;gap:9px;border-bottom:1px solid #ddd;padding:0 2px 12px}.vn-phone-avatar{display:grid;place-items:center;width:33px;height:33px;border-radius:50%;background:#bd2026;color:white;font-weight:800}.vn-phone-header strong,.vn-phone-header small{display:block}.vn-phone-header strong{font-size:13px}.vn-phone-header small{font-size:10px;color:#666}
+.vn-message{margin:17px 0 12px;background:#ece9e5;border-radius:15px 15px 15px 3px;padding:12px 13px;font-size:13px;line-height:1.4}
+.vn-message-out{background:#e4d6d2;border-radius:15px 15px 3px 15px;margin-left:15px}
+.vn-photo{display:block;width:88%;border:0;background:#fff;padding:0;border-radius:12px;overflow:hidden;text-align:left;color:#3c3330;box-shadow:0 2px 8px #0002}.vn-photo img{display:block;width:100%;height:140px;object-fit:cover}.vn-photo span{display:block;padding:6px 9px;font-size:11px}.vn-phone-bottom{position:absolute;bottom:7px;left:36%;right:36%;height:4px;border-radius:3px;background:#222}
+.vn-lightbox{position:absolute;z-index:20;inset:0;background:#140d0beb;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:40px}
+.vn-lightbox img{max-width:min(100%,900px);max-height:72vh;object-fit:contain;box-shadow:0 18px 60px #0009}.vn-lightbox p{margin:0;color:#fff;font-size:14px}.vn-lightbox-close{position:absolute;top:15px;right:24px;background:#bd2026;border:0;color:#fff;width:42px;height:42px;font-size:27px!important}
+.vn-inventory{width:min(540px,100%);background:#f7f7f2;color:#2a2926;box-shadow:0 20px 65px #0009;border:1px solid #d3d0c6;transform:rotate(1deg);transition:transform .25s}
+.vn-prop.is-expanded .vn-inventory{transform:rotate(0) scale(1.12)}
+.vn-inv-top{display:flex;justify-content:space-between;align-items:center;background:#bd2026;color:#fff;padding:11px 15px;font-size:12px}.vn-inv-top strong{font-size:22px;letter-spacing:-.04em}.vn-inv-top span{font-size:10px}
+.vn-inv-toolbar{background:#e9e8df;border-bottom:1px solid #d0cec4;padding:9px 15px;font-size:11px;color:#6e6c64}.vn-inv-toolbar b{display:block;color:#24231e;font-size:15px;margin-top:3px}
+.vn-inv-grid{display:grid;grid-template-columns:1.3fr 1fr;padding:13px 15px;font-size:12px}.vn-inv-grid>*{padding:8px 3px;border-bottom:1px solid #dedcd3}.vn-inv-grid strong{text-align:right;font-size:14px}.vn-inv-ok{color:#2e6844}.vn-inv-alert{color:#bd2026!important;font-size:20px!important}
+.vn-inv-inspect{display:block;margin:0 15px 9px auto;border:1px solid #bd2026;color:#bd2026;background:white;padding:7px 11px;font-size:11px!important;font-weight:800!important}.vn-inv-foot{margin:0;padding:0 15px 13px;color:#77746c;font-size:10px}
+@media(max-width:760px){.vn-brand span{display:none}.vn-topbar{height:48px}.vn-stage{height:calc(100svh - 48px)}.vn-scene-caption{top:13px}.vn-actor{height:57vh;bottom:32%;left:-12%!important;width:72vw}.kind-final .vn-actor-manager{left:14%!important}.vn-prop{top:8%;right:3%;width:54%;height:50%}.vn-phone{height:100%;border-width:6px;border-radius:24px;padding:25px 9px 16px}.vn-phone-header small{display:none}.vn-message{font-size:10px;margin:10px 0 8px;padding:8px}.vn-photo img{height:100px}.vn-inventory{transform:none}.vn-prop.is-expanded .vn-inventory{transform:none}.vn-inv-grid{font-size:10px}.vn-inv-grid strong{font-size:11px}.vn-dialogue{left:8px;right:8px;bottom:8px;max-height:53%;padding:12px 14px 14px}.vn-dialogue>p{font-size:18px}.vn-controls-row{display:block}.vn-continue{display:block;margin:10px 0 0 auto}.vn-choices button{font-size:12px;padding:8px 10px}.vn-feedback{font-size:12px}.vn-lightbox{padding:15px}}
+@media(prefers-reduced-motion:reduce){.vn-stage-bg,.vn-actor,.vn-phone{animation:none}}
+
+/* Выбор персонажа и совместные кадры */
+.vn-setup[hidden],.vn-stage[hidden],.vn-calc-results[hidden]{display:none!important}
+.vn-setup{height:calc(100svh - 56px);position:relative;display:flex;align-items:center;justify-content:center;gap:clamp(30px,5vw,90px);padding:50px;overflow:auto;background:linear-gradient(90deg,#17120fef,#17120fad),url('assets/novel-office.webp') center/cover;color:#fff}
+.vn-setup-copy{max-width:430px}.vn-setup-copy>span{color:#e7a5a5;text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:800}.vn-setup-copy h2{font:800 clamp(36px,4vw,62px)/1.05 var(--serif);margin:13px 0 22px}.vn-setup-copy p{font-size:17px;line-height:1.5;color:#e9ded6}
+.vn-avatar-options{display:flex;gap:16px}.vn-avatar-options button{width:185px;height:405px;display:flex;flex-direction:column;align-items:stretch;background:#f6f1ea;border:2px solid transparent;color:#261f1d;padding:0;text-align:left;transition:transform .2s,border-color .2s}.vn-avatar-options button:hover,.vn-avatar-options button:focus-visible{transform:translateY(-6px);border-color:#bd2026}.vn-avatar-options strong{font-size:18px;padding:12px 15px 2px}.vn-avatar-options small{font-size:12px;color:#ad2026;padding:0 15px 14px;font-weight:800}.vn-avatar-art{display:block;height:326px;background-size:auto 96%;background-repeat:no-repeat;background-position:center bottom;background-color:#e5ddd2}.vn-avatar-art.female{background-image:url('assets/novel-manager-full.webp')}.vn-avatar-art.male{background-image:url('assets/novel-manager-male.webp')}
+.avatar-male .vn-actor-manager{background-image:url('assets/novel-manager-male.webp')}
+.kind-share .vn-actor-kon,.kind-final .vn-actor-kon,.kind-choice.scene-bar .vn-actor-kon,.kind-friday .vn-actor-kon,.kind-fridaythanks .vn-actor-kon{left:5%;height:min(70vh,700px);background-image:url('assets/novel-konstantin-facing.webp');transform:none}
+.kind-share .vn-actor-manager,.kind-final .vn-actor-manager,.kind-choice.scene-bar .vn-actor-manager,.kind-friday .vn-actor-manager,.kind-fridaythanks .vn-actor-manager{left:63%;height:min(70vh,700px);background-image:url('assets/novel-manager-female-facing.webp');transform:none}
+.kind-share.avatar-male .vn-actor-manager,.kind-final.avatar-male .vn-actor-manager,.kind-choice.scene-bar.avatar-male .vn-actor-manager,.kind-friday.avatar-male .vn-actor-manager,.kind-fridaythanks.avatar-male .vn-actor-manager{background-image:url('assets/novel-manager-male.webp');transform:scaleX(-1)}
+.kind-share .vn-prop{left:50%;right:auto;top:10%;width:300px;height:60%;transform:translateX(-50%)}
+
+/* Карточка остатков */
+.vn-prop.is-inventory{right:5%;width:min(47vw,630px);top:12%;height:60%}
+.vn-prop.is-inventory.is-expanded{position:fixed;top:76px;left:50%;right:auto;transform:translateX(-50%);z-index:30;width:min(820px,calc(100vw - 30px));height:auto;max-height:calc(100svh - 100px)}
+.vn-prop.is-inventory.is-expanded:before{content:"";position:fixed;inset:-100vmax;background:#130f0fc2;z-index:-1}
+.vn-inventory,.vn-prop.is-expanded .vn-inventory{width:100%;max-height:100%;overflow-y:auto;transform:none;background:#fffefa;color:#272727;border:1px solid #c8c9c2;box-shadow:0 20px 60px #0009}
+.vn-prop.is-inventory.is-expanded .vn-inventory{max-height:calc(100svh - 100px)}
+.vn-inv-appbar{display:flex;align-items:center;gap:10px;background:#eee9d9;border-bottom:1px solid #d2cdbd;padding:9px 13px;font-size:12px;color:#3e3a34}.vn-inv-appbar b{font-weight:700}.vn-inv-appbar>span:last-child{margin-left:auto;color:#69645b;font-size:10px}.vn-inv-logo{display:grid;place-items:center;width:32px;height:30px;background:#f7d648;color:#312a13;font-weight:900;font-size:16px}
+.vn-inv-breadcrumb{padding:7px 14px;color:#817d72;font-size:10px;background:#fbfaf6}.vn-inv-title{padding:8px 14px 10px;font-size:17px;font-weight:800}.vn-inv-title small{display:block;font-size:10px;color:#77756b;font-weight:500;margin-top:3px}
+.vn-inv-tabs{display:flex;gap:20px;border-bottom:1px solid #d5d4ce;padding:0 14px;font-size:11px}.vn-inv-tabs span{padding:7px 0}.vn-inv-tabs .active{border-bottom:3px solid #bd2026;color:#a61d22;font-weight:800}
+.vn-inv-table-wrap{padding:11px 13px 0;overflow-x:auto}.vn-inv-table{width:100%;border-collapse:collapse;text-align:left;font-size:11px;min-width:420px}.vn-inv-table th{background:#eeeee9;color:#67665f;font-weight:700;padding:8px 9px;border:1px solid #d9d9d3}.vn-inv-table td{padding:10px 9px;border:1px solid #d9d9d3;background:#fff}.vn-inv-table td:first-child{font-weight:700}.vn-inv-table .short{color:#bd2026;font-weight:900;background:#fff2f1}
+.vn-inv-meta{display:flex;gap:10px;flex-wrap:wrap;padding:9px 13px;color:#67645f;font-size:10px}.vn-inv-meta span{background:#f3f2ee;padding:6px 8px}.vn-inv-meta b{color:#292823}
+.vn-inv-inspect{margin:0 13px 9px auto;border:1px solid #b6b3a8;color:#24211e;background:#f7f6f2;padding:7px 10px;font-size:10px!important}.vn-inv-inspect:hover{border-color:#bd2026;color:#bd2026}.vn-inv-detail{display:none;grid-template-columns:1fr 1fr;gap:6px;padding:10px 13px;background:#f6f5f0;border-top:1px solid #ddd9cf;font-size:10px}.vn-inv-detail strong{grid-column:1/-1;font-size:11px}.vn-inv-detail span{padding:5px 7px;background:white}.vn-inv-detail .short{color:#bd2026}.vn-prop.is-expanded .vn-inv-detail{display:grid}.vn-inv-foot{padding:8px 13px;color:#8b877e;font-size:9px;margin:0}
+
+/* Расчёт и лист, который видит клиент */
+.vn-prop.is-calculator{right:6%;top:8%;width:min(42vw,520px);height:72%;align-items:flex-start}
+.kind-calculator .vn-dialogue>p{font-size:22px;line-height:1.25}
+.vn-calc{width:100%;max-height:100%;overflow-y:auto;background:#faf7f2;color:#28211e;box-shadow:0 20px 60px #0009;padding:18px 22px;border-top:5px solid #bd2026}.vn-calc-head span,.vn-share-sheet>span{font-size:10px;letter-spacing:.12em;color:#ad2026;font-weight:850}.vn-calc-head strong{display:block;font:800 26px/1.1 var(--serif);margin:4px 0 15px}.vn-calc label{font-size:11px;font-weight:800}.vn-calc-input{display:flex;align-items:center;border-bottom:2px solid #bd2026;margin:4px 0 13px;width:150px}.vn-calc-input input{border:0;background:transparent;width:120px;font:800 34px/1.1 var(--serif);color:#a72129;padding:4px 0;outline:none}.vn-calc-input span{color:#a72129;font-size:22px}.vn-calc-row{display:flex;justify-content:space-between;border-bottom:1px solid #e0dbd4;padding:7px 0;font-size:12px}.vn-calc-run{background:#bd2026;color:white;border:0;padding:9px 17px;margin:12px 0;font-size:12px!important;font-weight:800!important}.vn-calc-results{border-top:2px solid #d6cdc4}.vn-calc-results>div,.vn-share-sheet>div{display:flex;justify-content:space-between;gap:14px;padding:6px 0;font-size:11px}.vn-calc-results strong,.vn-share-sheet b{white-space:nowrap}.vn-calc-results .total,.vn-share-total{border-top:1px solid #bd2026;color:#a72129;font-weight:800}.vn-calc p{font-size:10px;line-height:1.4;color:#77716a;margin:8px 0 0}
+.vn-share-sheet{width:100%;background:#faf7f2;color:#29211f;padding:17px 18px;border-top:5px solid #bd2026;box-shadow:0 16px 40px #0008;transform:rotate(-2deg)}.vn-share-sheet>strong{display:block;font:800 25px/1.1 var(--serif);margin:8px 0}.vn-share-sheet small{display:block;border-top:1px solid #d8d0c6;padding-top:8px;font-size:9px;color:#746f68;line-height:1.4}
+.vn-prop.is-worknote,.vn-prop.is-delivery{right:7%;width:min(39vw,500px);top:12%;height:60%;align-items:flex-start}
+.vn-worknote{width:100%;background:#faf7f2;color:#29211f;padding:20px 22px;border-top:5px solid #bd2026;box-shadow:0 20px 55px #0009;transform:rotate(1deg)}
+.vn-worknote>span{display:block;color:#ad2026;letter-spacing:.12em;font-size:10px;font-weight:850}.vn-worknote>strong{display:block;font:800 26px/1.12 var(--serif);margin:8px 0 15px}.vn-worknote>div{padding:8px 0;border-top:1px solid #e2dbd2;font-size:13px}.vn-worknote>div b{color:#af2027}.vn-worknote p{border-top:1px solid #d9cdc0;margin:10px 0 0;padding-top:10px;color:#6f6860;font-size:11px;line-height:1.45}.vn-worknote.verified,.vn-worknote.delivery{border-top-color:#758452}.vn-worknote.verified>div b,.vn-worknote.delivery>div b{color:#4f683f}
+.vn-prop.has-result .vn-calc-row{display:none}.vn-prop.has-result .vn-calc-run{margin:4px 0 8px}.vn-calc-warning{color:#ae1f25!important;background:#fff0ee;padding:6px 8px;margin:5px 0!important}
+.vn-calc-hint{padding:9px 11px;background:#f0ebe4;border-left:3px solid #bd2026;color:#4b443e!important;font-size:11px!important;line-height:1.45!important;margin:0 0 12px!important}
+.vn-calc-hint b{color:#942027}.vn-calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:9px 13px}.vn-calc-fields label{display:block;font-size:11px;line-height:1.25;color:#514943}.vn-calc-fields input{display:block;width:100%;margin-top:5px;border:1px solid #d7cfc6;border-radius:3px;background:#fff;padding:8px 9px;color:#952027;font:800 20px/1.2 var(--sans);outline:none}.vn-calc-fields input:focus{border-color:#bd2026;box-shadow:0 0 0 2px #bd202624}.vn-calc-fields input::placeholder{color:#a7a09a;font-size:12px;font-weight:400}.vn-prop.is-calculator{height:78%}.vn-prop.is-syrupcalc{width:min(45vw,560px)}
+.vn-prop.is-calculator{top:2%;height:67%}.vn-prop.is-syrupcalc{width:min(45vw,560px)}.kind-syrupcalc .vn-dialogue>p{font-size:22px;line-height:1.28}.kind-syrupshare .vn-actor-kon{left:5%;height:min(70vh,700px);background-image:url('assets/novel-konstantin-facing.webp')}.kind-syrupshare .vn-actor-manager{left:63%;height:min(70vh,700px);background-image:url('assets/novel-manager-female-facing.webp')}.kind-syrupshare.avatar-male .vn-actor-manager{background-image:url('assets/novel-manager-male.webp');transform:scaleX(-1)}.kind-syrupshare .vn-prop{left:50%;right:auto;top:10%;width:300px;height:60%;transform:translateX(-50%)}
+@media(max-width:760px){.vn-setup{height:calc(100svh - 48px);display:block;padding:22px 15px}.vn-setup-copy h2{font-size:32px;margin:8px 0}.vn-setup-copy p{font-size:13px;margin:0 0 15px}.vn-avatar-options{gap:9px;justify-content:center}.vn-avatar-options button{width:46%;height:290px}.vn-avatar-art{height:235px}.vn-avatar-options strong{font-size:14px;padding:7px 9px 0}.vn-avatar-options small{padding:0 9px 7px;font-size:10px}
+.kind-share .vn-actor-kon,.kind-final .vn-actor-kon,.kind-choice.scene-bar .vn-actor-kon,.kind-friday .vn-actor-kon,.kind-fridaythanks .vn-actor-kon{left:0!important;width:32vw;height:40vh}.kind-share .vn-actor-manager,.kind-final .vn-actor-manager,.kind-choice.scene-bar .vn-actor-manager,.kind-friday .vn-actor-manager,.kind-fridaythanks .vn-actor-manager{left:69%!important;width:32vw;height:40vh}.kind-share .vn-prop{top:15%;width:49%;height:37%}
+.vn-prop.is-worknote,.vn-prop.is-delivery{right:3%;top:10%;width:63%;height:49%}.vn-worknote{padding:10px 12px}.vn-worknote>strong{font-size:17px;margin:5px 0 8px}.vn-worknote>div{font-size:10px;padding:5px 0}.vn-worknote p{font-size:9px;padding-top:6px;margin-top:6px}.vn-message-out{font-size:10px}
+.vn-prop.is-inventory{right:3%;top:12%;width:67%;height:47%}.vn-inv-appbar{padding:6px 8px;font-size:9px}.vn-inv-title{font-size:13px}.vn-inv-breadcrumb,.vn-inv-tabs{font-size:9px}.vn-inv-table{font-size:8px;min-width:0;table-layout:fixed}.vn-inv-table th:first-child{width:40%}.vn-inv-table th:not(:first-child){width:20%}.vn-inv-table th,.vn-inv-table td{padding:5px 3px;overflow-wrap:anywhere}.vn-inv-meta{font-size:9px;padding:5px}.vn-inv-detail{grid-template-columns:1fr;font-size:9px}.vn-inv-inspect{font-size:9px!important}
+.vn-prop.is-inventory.is-expanded{top:60px;height:auto;width:calc(100vw - 18px);max-height:calc(100svh - 75px)}.vn-prop.is-inventory.is-expanded .vn-inventory{max-height:calc(100svh - 75px)}
+.vn-prop.is-calculator{right:3%;top:11%;width:65%;height:49%}.kind-calculator .vn-dialogue>p{font-size:17px}.vn-calc{padding:9px 11px}.vn-calc-head strong{font-size:17px;margin-bottom:9px}.vn-calc-input input{font-size:25px}.vn-calc-row,.vn-calc-results>div{font-size:10px}.vn-calc p{font-size:9px}.vn-share-sheet{padding:9px}.vn-share-sheet>strong{font-size:15px}.vn-share-sheet>div{font-size:9px}.vn-share-sheet small{font-size:8px}
+.vn-prop.is-calculator,.vn-prop.is-syrupcalc{height:55%;width:70%;top:8%}.vn-calc-fields{gap:6px}.vn-calc-fields label{font-size:9px}.vn-calc-fields input{font-size:15px;padding:5px}.vn-calc-hint{font-size:9px!important;padding:6px!important;margin-bottom:7px!important}.vn-calc-head strong{font-size:16px}.vn-calc-run{margin:7px 0}
+.vn-prop.is-calculator,.vn-prop.is-syrupcalc{height:59%;top:3%}.kind-syrupcalc .vn-dialogue>p{font-size:17px}.kind-syrupshare .vn-actor-kon{left:0!important;width:32vw;height:40vh}.kind-syrupshare .vn-actor-manager{left:69%!important;width:32vw;height:40vh}.kind-syrupshare .vn-prop{top:15%;width:49%;height:37%}
+.kind-calculator .vn-scene-caption,.kind-syrupcalc .vn-scene-caption{display:none}
+}
