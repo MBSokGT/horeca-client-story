@@ -44,15 +44,15 @@ if (vn) {
     ]},
     {place:'Бар «Лофт»',time:'17:40 · вопрос о составе',bg:'bar',actor:'kon',speaker:'Константин',line:'«Состав и документы пришлите, пожалуйста. И 520 ₽ за бутылку — всё равно немало. Сейчас мы покупаем сироп за 560 ₽/л и льём примерно 25 мл на напиток. Покажите, что получится по себестоимости».',kind:'dialog'},
     {place:'Бар «Лофт»',time:'17:41 · возражение',bg:'bar',actor:'both',speaker:'Ваш ответ',line:'Что ответить на «дороговато», не споря и не обещая окупаемость?',kind:'choice',choices:[
-      {text:'«Понимаю. Давайте сравним стоимость порции при одинаковой дозировке. По вашему текущему сиропу есть цена 560 ₽ за литр и 25 мл; по нашему — 520 ₽ и 1 л. Состав и документы отправлю после проверки».',good:true,reply:'«Да, так понятнее. Посчитайте, пожалуйста. Если разница небольшая, сначала дадим бармену попробовать».',why:'Вы признали сомнение, опираетесь на известные цифры и оставили вкус и состав для проверки.'},
+      {text:'«Понимаю. Давайте сравним стоимость порции с учётом дозировки каждого сиропа. По вашему есть цена 560 ₽ за литр и 25 мл; по нашему — 520 ₽ и 1 л. Его дозировку проверим на пробе, состав и документы отправлю после проверки».',good:true,reply:'«Да, так понятнее. Посчитайте, пожалуйста. А новую дозировку сначала проверим с барменом».',why:'Вы признали сомнение, опираетесь на известные цифры и не выдаёте дозировку нового сиропа за проверенный факт.'},
       {text:'«У нас вкус насыщеннее, поэтому хватит 15 мл. Получится сильно дешевле вашего».',good:false,reply:'«Откуда цифра 15 мл? Мы ещё даже не пробовали».',why:'Дозировка и сравнительный вкус не проверены. Такой расчёт выглядит убедительно, но держится на выдуманном допущении.'},
       {text:'«Разница всего 40 ₽ за бутылку. Это несерьёзно для бара».',good:false,reply:'«Мы считаем себестоимость каждой позиции. Покажите цифры на порцию».',why:'Оценивать значимость расходов за клиента нельзя. Его вопрос — о себестоимости напитка.'}
     ]},
-    {place:'Рабочий стол',time:'17:43 · расчёт на порцию',bg:'office',actor:'manager',speaker:'Расчёт для Константина',line:'Введите данные двух сиропов. За основу возьмите одинаковую дозировку 25 мл; после пробы бармен сможет её уточнить. Сравните стоимость одной порции и 12 бутылок.',kind:'syrupcalc'},
-    {place:'Бар «Лофт»',time:'17:46 · показываете расчёт',bg:'bar',actor:'both',speaker:'Константин',line:'«13 ₽ на порцию против 14 ₽ сейчас — разница рубль. Понял. Но вкус в латте ещё нужно проверить, а по составу я жду документы».',kind:'syrupshare'},
+    {place:'Рабочий стол',time:'17:43 · расчёт на порцию',bg:'office',actor:'manager',speaker:'Расчёт для Константина',line:'Введите цену и объём из прайса и слов Константина. Дозировку задайте отдельно для каждого сиропа: у Pinch&Drop она может отличаться. Сравните стоимость порции и 12 бутылок.',kind:'syrupcalc'},
+    {place:'Бар «Лофт»',time:'17:46 · показываете расчёт',bg:'bar',actor:'both',speaker:'Константин',line:'',kind:'syrupshare'},
     {place:'Бар «Лофт»',time:'17:48 · следующий шаг',bg:'bar',actor:'both',speaker:'Ваш ответ',line:'Как закончить разговор о сиропе?',kind:'choice',choices:[
       {text:'«Сейчас проверю наличие образца, срок и документы; до 18:00 пришлю ответ. На пробе бармен сравнит вкус и фактическую дозировку в латте и холодном кофе. После этого решим по 12 бутылкам».',good:true,reply:'«Договорились. До пробы в карту его не ставим. Пришлите состав и подтвердите образец».',why:'Вы согласовали проверяемый тест и следующий контакт, не превратив расчёт в обещание, что сироп подойдёт.'},
-      {text:'«Экономия есть, давайте сразу оформим 12 бутылок на пятницу. Бармен потом подстроит рецепт».',good:false,reply:'«Нет, без пробы и состава мы не можем ставить новый вкус».',why:'Экономика одной порции не доказывает, что продукт подходит рецепту. Клиент прямо просил пробу.'},
+      {text:'«Раз расчёт готов, давайте сразу оформим 12 бутылок на пятницу. Бармен потом подстроит рецепт».',good:false,reply:'«Нет, без пробы и состава мы не можем ставить новый вкус».',why:'Расчёт одной порции не доказывает, что продукт подходит рецепту. Клиент прямо просил пробу.'},
       {text:'«Документы и образец уточню. Как что-то узнаю, напишу».',good:false,reply:'«Хорошо, но мне нужен ответ сегодня, чтобы распланировать завтрашнюю пробу».',why:'Вы не придумали гарантий, но не назвали время следующего контакта.'}
     ]},
     {place:'Рабочий стол',time:'17:52 · проверка',bg:'office',actor:'none',speaker:'Коллега по ассортименту',line:'«Состав и документы по этой партии нашла, отправила тебе. Один образец есть, его добавили в завтрашний рейс с бокалами. По 12 бутылкам заказ оформим только после решения клиента».',kind:'dialog'},
@@ -63,10 +63,16 @@ if (vn) {
     {place:'Бар «Лофт» · первый вечер',time:'19:12 · полный зал',bg:'bar-friday',actor:'both',speaker:'Константин',line:'«Слушайте, вчера я уже собирался менять сервировку. Но вы были на связи, и к утру я точно знал, что приедет. Спасибо. В следующий раз начну с вас».',kind:'fridaythanks'},
     {place:'Запуск состоялся',time:'Пятница · 19:15',bg:'bar-friday',actor:'both',speaker:'Пятница у «Лофта»',line:'Меню запущено. За баром выдают первые напитки в новых бокалах. Константин наконец занимается гостями, а не ищет, где его заказ.',kind:'final'}
   ];
-  const state = {index:0,score:0,answers:[],photoSeen:false,inventorySeen:false,calculated:false,syrupCalculated:false,price:320,freeQty:80,otherQty:40,needQty:120,syrupPortion:13,currentPortion:14,avatar:'female',answered:false};
+  const state = {index:0,score:0,answers:[],photoSeen:false,inventorySeen:false,calculated:false,syrupCalculated:false,price:320,freeQty:80,otherQty:40,needQty:120,syrupPortion:13,currentPortion:14,syrupDose:25,currentDose:25,syrupQty:12,avatar:'female',answered:false};
   let returnFocus;
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const rub = amount => new Intl.NumberFormat('ru-RU').format(amount)+' ₽';
+  const money = amount => new Intl.NumberFormat('ru-RU',{maximumFractionDigits:2}).format(amount)+' ₽';
+  const syrupDifference = () => {
+    const difference = Math.abs(state.currentPortion-state.syrupPortion);
+    if(difference<0.005)return 'Стоимость сиропа на порцию одинакова';
+    return 'Pinch&Drop '+(state.syrupPortion<state.currentPortion?'дешевле':'дороже')+' на '+money(difference)+' за порцию';
+  };
   function renderProp(step) {
     const prop = $('[data-vn-prop]'); prop.innerHTML=''; prop.className='vn-prop';
     if (step.kind==='phone') {
@@ -126,15 +132,15 @@ if (vn) {
     if(step.kind==='syrupcalc'){
       prop.classList.add('is-calculator','is-syrupcalc');
       prop.innerHTML=`<div class="vn-calc"><div class="vn-calc-head"><span>СИРОПЫ · СРАВНЕНИЕ</span><strong>Сколько стоит порция?</strong></div>
-        <p class="vn-calc-hint">Прайс: Pinch&Drop — <b>520 ₽ / 1000 мл</b>. Со слов Константина: нынешний сироп — <b>560 ₽ / 1000 мл</b>. Для сравнения возьмите <b>25 мл</b> на порцию и запрос <b>12 бутылок</b>.</p>
-        <div class="vn-calc-fields"><label>Pinch&Drop, ₽/бут.<input data-syrup-new-price type="number" min="1" step="1" inputmode="numeric" placeholder="Цена"></label><label>Нынешний, ₽/бут.<input data-syrup-old-price type="number" min="1" step="1" inputmode="numeric" placeholder="Цена"></label><label>Объём бутылки, мл<input data-syrup-volume type="number" min="1" step="1" inputmode="numeric" placeholder="Объём"></label><label>На порцию, мл<input data-syrup-dose type="number" min="1" step="1" inputmode="numeric" placeholder="Дозировка"></label><label>Бутылок в запросе<input data-syrup-qty type="number" min="1" step="1" inputmode="numeric" placeholder="Количество"></label></div>
+        <p class="vn-calc-hint">Прайс: Pinch&Drop — <b>520 ₽ / 1000 мл</b>. Со слов Константина: нынешний сироп — <b>560 ₽ / 1000 мл</b> при <b>25 мл</b> на напиток. Для Pinch&Drop дозировка пока не проверена. Запрос — <b>12 бутылок</b>.</p>
+        <div class="vn-calc-fields"><label>Pinch&Drop, ₽/бут.<input data-syrup-new-price type="number" min="1" step="1" inputmode="numeric" placeholder="Цена"></label><label>Нынешний, ₽/бут.<input data-syrup-old-price type="number" min="1" step="1" inputmode="numeric" placeholder="Цена"></label><label>Объём бутылки, мл<input data-syrup-volume type="number" min="1" step="1" inputmode="numeric" placeholder="Объём"></label><label>Бутылок в запросе<input data-syrup-qty type="number" min="1" step="1" inputmode="numeric" placeholder="Количество"></label><label>Pinch&Drop · на порцию, мл<input data-syrup-new-dose type="number" min="0.1" step="any" inputmode="decimal" placeholder="Дозировка"></label><label>Нынешний · на порцию, мл<input data-syrup-old-dose type="number" min="0.1" step="any" inputmode="decimal" value="25"></label></div>
         <button type="button" class="vn-calc-run" data-syrup-run>Сравнить</button><div class="vn-calc-results" data-vn-calc-results hidden></div><p>Это стоимость только сиропа. Фактическую дозировку и вкус проверят на пробе; молоко, кофе, труд и потери не учтены.</p></div>`;
       prop.querySelector('[data-syrup-run]').addEventListener('click',calculateSyrup);
       prop.querySelectorAll('input').forEach(input=>input.addEventListener('input',()=>{state.syrupCalculated=false;prop.classList.remove('has-result');prop.querySelector('[data-vn-calc-results]').hidden=true;updateContinue()}));
     }
     if(step.kind==='syrupshare'){
       prop.classList.add('is-share');
-      prop.innerHTML=`<div class="vn-share-sheet"><span>СРАВНЕНИЕ ДЛЯ «ЛОФТА»</span><strong>${rub(state.syrupPortion)} за порцию</strong><div>Pinch&Drop · 25 мл <b>${rub(state.syrupPortion)}</b></div><div>Нынешний сироп · 25 мл <b>${rub(state.currentPortion)}</b></div><div class="vn-share-total">Разница <b>${rub(state.currentPortion-state.syrupPortion)} на порцию</b></div><small>Одинаковая дозировка — допущение для сравнения. Решение о 12 бутылках — после пробы, проверки состава и срока.</small></div>`;
+      prop.innerHTML=`<div class="vn-share-sheet"><span>СРАВНЕНИЕ ДЛЯ «ЛОФТА»</span><strong>${money(state.syrupPortion)} за порцию</strong><div>Pinch&Drop · ${state.syrupDose} мл <b>${money(state.syrupPortion)}</b></div><div>Нынешний · ${state.currentDose} мл <b>${money(state.currentPortion)}</b></div><div class="vn-share-total">${syrupDifference()}</div><small>Дозировка Pinch&Drop пока предположительная. Решение о ${state.syrupQty} бутылках — после пробы, проверки состава и срока.</small></div>`;
     }
   }
   function calculate(){
@@ -151,17 +157,17 @@ if (vn) {
     updateContinue();
   }
   function calculateSyrup(){
-    const selectors=['[data-syrup-new-price]','[data-syrup-old-price]','[data-syrup-volume]','[data-syrup-dose]','[data-syrup-qty]'];
+    const selectors=['[data-syrup-new-price]','[data-syrup-old-price]','[data-syrup-volume]','[data-syrup-qty]','[data-syrup-new-dose]','[data-syrup-old-dose]'];
     const values=selectors.map(sel=>Number($(sel).value));
     const bad=selectors.find((sel,i)=>!$(sel).value||!Number.isFinite(values[i])||values[i]<=0||values[i]>100000);
     if(bad){const input=$(bad);input.setCustomValidity('Введите положительное число');input.reportValidity();input.setCustomValidity('');return}
-    const [newPrice,oldPrice,volume,dose,qty]=values;
-    const valid=values.every((value,i)=>value===[520,560,1000,25,12][i])&&dose<=volume;
+    const [newPrice,oldPrice,volume,qty,newDose,oldDose]=values;
+    const valid=newPrice===520&&oldPrice===560&&volume===1000&&qty===12&&newDose<=volume&&oldDose<=volume;
     state.syrupCalculated=valid;
-    state.syrupPortion=newPrice/(volume/dose);state.currentPortion=oldPrice/(volume/dose);
-    const money=n=>new Intl.NumberFormat('ru-RU',{maximumFractionDigits:2}).format(n)+' ₽';
+    state.syrupDose=newDose;state.currentDose=oldDose;state.syrupQty=qty;
+    state.syrupPortion=newPrice/(volume/newDose);state.currentPortion=oldPrice/(volume/oldDose);
     const result=$('[data-vn-calc-results]');
-    result.innerHTML=`<div><span>Pinch&Drop · на порцию</span><strong>${money(state.syrupPortion)}</strong></div><div><span>Нынешний · на порцию</span><strong>${money(state.currentPortion)}</strong></div><div><span>Pinch&Drop · ${qty} бутылок</span><strong>${money(newPrice*qty)}</strong></div><div class="total"><span>Разница на порцию</span><strong>${money(state.currentPortion-state.syrupPortion)}</strong></div>${valid?'':'<p class="vn-calc-warning">Сверьте цену, объём, дозировку и количество с данными в разговоре.</p>'}`;
+    result.innerHTML=`<div><span>Pinch&Drop · ${newDose} мл</span><strong>${money(state.syrupPortion)}</strong></div><div><span>Нынешний · ${oldDose} мл</span><strong>${money(state.currentPortion)}</strong></div><div><span>Pinch&Drop · ${qty} бутылок</span><strong>${money(newPrice*qty)}</strong></div><div class="total"><span>${syrupDifference()}</span></div>${valid?'':'<p class="vn-calc-warning">Сверьте цены, объём и число бутылок с исходными данными. Дозировки можно менять для сравнения, но они не должны превышать объём бутылки.</p>'}`;
     result.hidden=false;$('[data-vn-prop]').classList.add('has-result');$('[data-vn-prop] .vn-calc').scrollTop=$('[data-vn-prop] .vn-calc').scrollHeight;
     $('[data-vn-line]').textContent=valid?steps[state.index].line:'В расчёте есть расхождение с данными кейса. Проверьте исходные цифры.';
     updateContinue();
@@ -173,7 +179,9 @@ if (vn) {
     $('[data-vn-step-label]').textContent=(state.index+1)+' / '+steps.length;
     $('[data-vn-scene-count]').textContent='Сцена '+(state.index+1);
     $('[data-vn-speaker]').textContent=s.speaker;
-    $('[data-vn-line]').textContent=s.kind==='fridaythanks'&&state.score<5
+    $('[data-vn-line]').textContent=s.kind==='syrupshare'
+      ? `«При ${state.syrupDose} мл Pinch&Drop выходит ${money(state.syrupPortion)} на порцию, нынешний сироп — ${money(state.currentPortion)} при ${state.currentDose} мл. ${syrupDifference()}. Новую дозировку и вкус проверим на пробе».`
+      :s.kind==='fridaythanks'&&state.score<5
       ?'«Спасибо, что в итоге всё приехало. Но вчера мне пришлось несколько раз уточнять сроки. В следующий раз давайте сразу договоримся, когда вы вернётесь с ответом».'
       :s.kind==='final'&&state.score<5
         ?'Бар открылся, гости заняли места. Поставка спасла запуск, но в разговоре были лишние обещания или паузы. В следующий раз клиенту нужен точный статус раньше.'
@@ -198,7 +206,7 @@ if (vn) {
     $('[data-vn-choices]').replaceChildren();updateStars();updateContinue();$('[data-vn-dialogue]').scrollTop=$('[data-vn-dialogue]').scrollHeight;
   }
   function next(){if(state.index===steps.length-1){close();return}state.index++;render()}
-  function open(){returnFocus=document.activeElement;Object.assign(state,{index:0,score:0,answers:[],photoSeen:false,inventorySeen:false,calculated:false,syrupCalculated:false,price:320,freeQty:80,otherQty:40,needQty:120,syrupPortion:13,currentPortion:14,answered:false});vn.hidden=false;document.body.classList.add('vn-open');$('[data-vn-stage]').hidden=true;$('[data-vn-setup]').hidden=false;$('[data-vn-step-label]').textContent='Выбор персонажа';$('[data-vn-avatar]').focus()}
+  function open(){returnFocus=document.activeElement;Object.assign(state,{index:0,score:0,answers:[],photoSeen:false,inventorySeen:false,calculated:false,syrupCalculated:false,price:320,freeQty:80,otherQty:40,needQty:120,syrupPortion:13,currentPortion:14,syrupDose:25,currentDose:25,syrupQty:12,answered:false});vn.hidden=false;document.body.classList.add('vn-open');$('[data-vn-stage]').hidden=true;$('[data-vn-setup]').hidden=false;$('[data-vn-step-label]').textContent='Выбор персонажа';$('[data-vn-avatar]').focus()}
   function chooseAvatar(avatar){state.avatar=avatar;$('[data-vn-setup]').hidden=true;$('[data-vn-stage]').hidden=false;render();$('[data-vn-continue]').focus()}
   function close(){vn.hidden=true;document.body.classList.remove('vn-open');$('[data-vn-lightbox]').hidden=true;if(returnFocus?.focus)returnFocus.focus()}
   document.querySelectorAll('[data-vn-open]').forEach(b=>b.addEventListener('click',open));
@@ -207,5 +215,5 @@ if (vn) {
   $('[data-vn-continue]').addEventListener('click',next);
   $('[data-vn-lightbox-close]').addEventListener('click',()=>{$('[data-vn-lightbox]').hidden=true;updateContinue();$('[data-vn-continue]').focus()});
   window.addEventListener('keydown',e=>{if(vn.hidden)return;if(e.key==='Escape'){if(!$('[data-vn-lightbox]').hidden){$('[data-vn-lightbox]').hidden=true;updateContinue()}else close()}});
-  window.render_game_to_text=()=>JSON.stringify({setup:!$('[data-vn-setup]').hidden,avatar:state.avatar,scene:state.index+1,total:steps.length,place:steps[state.index].place,kind:steps[state.index].kind,score:state.score,photoSeen:state.photoSeen,inventorySeen:state.inventorySeen,calculated:state.calculated,syrupCalculated:state.syrupCalculated,price:state.price,freeQty:state.freeQty,otherQty:state.otherQty,needQty:state.needQty,answered:state.answered});
+  window.render_game_to_text=()=>JSON.stringify({setup:!$('[data-vn-setup]').hidden,avatar:state.avatar,scene:state.index+1,total:steps.length,place:steps[state.index].place,kind:steps[state.index].kind,score:state.score,photoSeen:state.photoSeen,inventorySeen:state.inventorySeen,calculated:state.calculated,syrupCalculated:state.syrupCalculated,syrupDose:state.syrupDose,currentDose:state.currentDose,syrupPortion:state.syrupPortion,currentPortion:state.currentPortion,price:state.price,freeQty:state.freeQty,otherQty:state.otherQty,needQty:state.needQty,answered:state.answered});
 }
